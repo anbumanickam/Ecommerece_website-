@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container py-5">
+    <!-- Hero Section -->
+    <div class="jumbotron text-center bg-primary text-white py-5">
+        <h1 class="display-4">Welcome to Cars Brand Management</h1>
+        <p class="lead">A simple ASP.NET MVC project to manage car brands and their details efficiently.</p>
+    </div>
+
+    <!-- About Project Section -->
+    <section id="about-project" class="my-5">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <h2>About the Project</h2>
+                <p>
+                    This project is built using ASP.NET MVC and Bootstrap, providing functionalities to:
+                </p>
+                <ul>
+                    <li>Create car brand details</li>
+                    <li>Edit existing information</li>
+                    <li>Delete records</li>
+                    <li>View a list of all car brands</li>
+                </ul>
+                <p>
+                    It’s designed to simplify the process of managing car brand information and is built with
+                    scalability and usability in mind.
+                </p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://via.placeholder.com/500" class="img-fluid rounded" alt="Project Overview">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="my-5">
+        <div class="row">
+            <div class="col-lg-6 text-center">
+                <img src="https://via.placeholder.com/300" class="img-fluid rounded-circle mb-3" alt="Your Photo">
+            </div>
+            <div class="col-lg-6">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I'm Anbumanicakm, a passionate software developer specializing in building web applications.
+                    This project is a demonstration of my skills in ASP.NET MVC, Bootstrap, and database management.
+                </p>
+                <p>
+                    I’m constantly looking to improve my craft and enjoy working on projects that solve real-world
+                    problems.
+                </p>
+                <p>
+                    Feel free to connect with me on:
+                </p>
+                <ul>
+                    <li><a href="https://github.com/anbumanickam" target="_blank">GitHub</a></li>
+                    <li><a href="www.linkedin.com/in/anbu-manickam" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Download Section -->
+    <section id="resume" class="my-5 text-center">
+        <h2>Download My Resume</h2>
+        <p>
+            Click the button below to download my resume and learn more about my professional experience.
+        </p>
+        <a class="btn btn-success btn-lg" href="@Url.Action("DownloadResume", "Home")">Download Resume</a>
+    </section>
+
+    <!-- Compliment Box Section -->
+    <section id="compliment-box" class="my-5">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h3>Send Me a Compliment!</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" action="/Home/SubmitCompliment">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Compliment</label>
+                        <textarea class="form-control" id="message" name="message" rows="4"
+                            placeholder="Leave your compliment here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Compliment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Cars Brand Management. Built with ❤️ by [Your Name].</p>
+    </footer>
+</div>

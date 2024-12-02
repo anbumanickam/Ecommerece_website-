@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ecommerece_website.props" />
+</Project>
